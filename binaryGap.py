@@ -2,7 +2,6 @@ import unittest
 import random
 import re
 
-
 '''
 A binary gap within a positive integer N is any maximal sequence of consecutive zeros that is 
 surrounded by ones at both ends in the binary representation of N.
@@ -28,7 +27,6 @@ Write an efficient algorithm for the following assumptions:
 
 N is an integer within the range [1..2,147,483,647].
 '''
-
 
 def solution(N):
     
@@ -63,10 +61,9 @@ def solution(N):
 
     return largest
 
-  
+
 class TestSkeleton(unittest.TestCase):
 
-   
     def test_negative(self):
         self.assertEqual(solution(-1), 0)
 
@@ -89,7 +86,6 @@ class TestSkeleton(unittest.TestCase):
     def test_extreme_large_binary_gap(self):
         self.assertEqual(solution(2147483647), 0)
         self.assertEqual(solution(3908253), 3)
-
 
 if __name__ == '__main__':
     unittest.main()
