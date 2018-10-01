@@ -53,7 +53,7 @@ def solution(N):
             total = binList[idx] - binList[idx-1]
             total = total - 1
 
-        #Find longest of two gaps. If only one gap then return that gap
+        #Finds the largest gap. If only one gap then returns that gap
         if total >= largest: 
             largest = total
 
