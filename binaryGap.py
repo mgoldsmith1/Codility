@@ -46,12 +46,11 @@ def solution(N):
     binList = {}
 
     for match in re.finditer('1', strBinNum):
-        
         binList[idx] = match.start()
-        binList[idx] = match.end()
-        
+        binList[idx + 1] = match.end()
+
         if(idx > 0):
-            total = binList[idx] - binList[idx-1]
+            total = binList[idx] - binList[idx - 1]
             total = total - 1
 
         #Finds the largest gap. If only one gap, returns that gap.
