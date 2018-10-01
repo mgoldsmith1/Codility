@@ -51,9 +51,7 @@ will not be the focus of the assessment.
 def solution(A, K):
     # write your code in Python 3.6
 
-    if len(A) == 0:
-        return A
-    if len(A) == 1:
+    if len(A) == 0 or len(A) == 1:
         return A
     
     n = len(A) - 1
@@ -66,7 +64,6 @@ def solution(A, K):
     startVal = B[0]
 
     while idx < K:
-        
         while i > 1:
             B[j] = A[i-1]
             i -= 1
@@ -81,8 +78,6 @@ def solution(A, K):
         
     return B
     
-  
-  
 class TestSkeleton(unittest.TestCase):
 
     def test_empty_array(self):
