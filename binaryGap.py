@@ -36,13 +36,14 @@ def solution(N):
 
     binNum = "{0:b}".format(N) #100100010
 
-    #int to string
+    #bin to string
     strBinNum = str(binNum) #"100100010"
 
     largest = 0
-    binList = {}
-    idx = 0
     total = 0
+    idx = 0
+    
+    binList = {}
 
     for match in re.finditer('1', strBinNum):
         
@@ -53,7 +54,7 @@ def solution(N):
             total = binList[idx] - binList[idx-1]
             total = total - 1
 
-        #Finds the largest gap. If only one gap then returns that gap
+        #Finds the largest gap. If only one gap, returns that gap.
         if total >= largest: 
             largest = total
 
